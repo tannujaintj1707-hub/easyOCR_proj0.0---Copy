@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+  --font-sans: "Inter", sans-serif; 
+}
+
+/* Removed the blocks that were hiding the scrollbars globally.
+  By default, browsers will now display a vertical scrollbar on the right 
+  side if the page content exceeds the viewport height.
+*/
+
+/* Optional: If you want to ensure no horizontal scrolling ever occurs, you can add this */
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@layer utilities {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
